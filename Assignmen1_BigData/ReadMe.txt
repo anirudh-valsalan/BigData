@@ -5,7 +5,7 @@ i) File Name: FriendRecommendation.java
 Command to run:
 hadoop jar FriendRecommendation.jar FriendRecommendation /socNetData/networkdata output
 To see output1:
-Hdfs dfs â€“cat output/*
+Hdfs dfs –cat output/*
 
 ii) Recommendations for the users with following user IDs:
 
@@ -27,7 +27,7 @@ Command to run :
 hadoop jar FriendRecommendation.jar MutualFriends <user1> <user2> /socNetData/networkdata commonfriend
 commonfriend contains the list of the user id of mutual friends for the given two user ids.
 To see output2:
-Hdfs dfs â€“cat commonfriend/*
+Hdfs dfs –cat commonfriend/*
 
 Output: 
 0:1 	5,20
@@ -40,7 +40,7 @@ Command to run:
 hadoop jar FriendRecommendation.jar InMemoryJoin <user1> <user2> /socNetData/networkdata/ intermediate_output /socNetData/userdata/userdata.txt nameFriend
 nameFriend contains the list of the names and the zipcode of their mutual friends.
 To see nameFriend:
-Hdfs dfs â€“cat nameFriend/*
+Hdfs dfs –cat nameFriend/*
 Output for userId 0 and 1: 
 0:1     [Beth:33463,Juan:29201]
 
@@ -50,6 +50,6 @@ Command to run:
 hadoop jar FriendRecommendation.jar AverageAge /socNetData/userdata/userdata.txt /socNetData/networkdata /socNetData/userdata inter1 averageage
 averageage contains User Name, address as given format and average age of all the direct friends of particular User Id.  Top 20 users are sorted by the calculated average age from step 1 in descending order.
 To see average:
-Hdfs dfs â€“cat averageage_int2/*
+Hdfs dfs –cat averageage_int2/*
 
 
